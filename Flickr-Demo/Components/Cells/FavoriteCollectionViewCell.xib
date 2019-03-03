@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Favorite" id="gTV-IL-0wX" customClass="FavoriteCollectionViewCell" customModule="Flickr_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="40a-70-0iw">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAu-db-m1A">
+                        <rect key="frame" x="0.0" y="30" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="9cz-eU-d1v"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2Wm-UG-E6f">
+                        <rect key="frame" x="15" y="15" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="40a-70-0iw" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="KGb-6i-K8X"/>
+                <constraint firstItem="40a-70-0iw" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="LYf-Ej-YD6"/>
+                <constraint firstItem="KAu-db-m1A" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="N2e-Xa-fq7"/>
+                <constraint firstItem="KAu-db-m1A" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="O5x-Md-Ba5"/>
+                <constraint firstItem="40a-70-0iw" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="T7T-Xh-2W4"/>
+                <constraint firstItem="2Wm-UG-E6f" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Xjk-eq-D2S"/>
+                <constraint firstItem="KAu-db-m1A" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="r8R-Ga-UHh"/>
+                <constraint firstItem="40a-70-0iw" firstAttribute="bottom" secondItem="KAu-db-m1A" secondAttribute="top" id="taa-cg-omK"/>
+                <constraint firstItem="2Wm-UG-E6f" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="waX-C3-emN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="40a-70-0iw" id="ree-in-inV"/>
+                <outlet property="loadingIndicator" destination="2Wm-UG-E6f" id="G40-CY-HGn"/>
+                <outlet property="titleLabel" destination="KAu-db-m1A" id="J44-Na-Pcp"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
