@@ -43,7 +43,7 @@ class SearchPhotoCommand {
     
     private func createFlickrSearchAPIPath(text: String, perPage: String) -> String {
         let prefix = "https://api.flickr.com/services/rest/?method=flickr.photos.search"
-        let apiKey = "&api_key=74c9a493f6a093b6fbeb7c29d7dd441a"
+        let apiKey = "&api_key=8a9283df6f4f654187dd1a70a2ca3b73"
         let text = "&text=" + text.replacingOccurrences(of: " ", with: "+")
         let perPage = "&per_page=" + perPage
         let format = "&format=json&nojsoncallback=1"
